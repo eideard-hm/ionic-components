@@ -1,20 +1,16 @@
-<ion-header>
-  <ion-toolbar>
-
-    <ion-buttons>
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-
-    <ion-title>Components</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header title="Home"></app-header>
 
 <ion-content>
-  <ion-button routerLink="/alert" expand="block" shape="round">
-    Alert
-  </ion-button>
-
-  <ion-button routerLink="/action-sheet" expand="block" shape="round">
-    Action sheet
-  </ion-button>
+  <ion-list>
+    <ion-item
+      *ngFor="let item of components"
+      [routerLink] = "item.redirectTo"
+      detail="true">
+      <ion-icon
+        slot="start"
+        [name]="item.icon">
+      </ion-icon>
+      <ion-label>{{item.name}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
