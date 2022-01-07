@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'fab',
     loadChildren: () => import('./pages/fab/fab.module').then( m => m.FabPageModule)
   },
+  {
+    path: 'infinite-scroll',
+    loadChildren: () => import('./pages/infinite-scroll/infinite-scroll.module').then( m => m.InfiniteScrollPageModule)
+  },
 
 ];
 

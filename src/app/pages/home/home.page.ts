@@ -29,6 +29,10 @@ export class HomePage {
       icon: 'add-circle-outline',
       name: 'Fab',
       redirectTo: '/fab'
+    },{
+      icon: 'infinite-outline',
+      name: 'Infinite Scroll',
+      redirectTo: '/infinite-scroll'
     }
   ];
 
