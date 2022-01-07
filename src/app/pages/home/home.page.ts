@@ -24,6 +24,11 @@ export class HomePage {
       icon: 'beaker-outline',
       name: 'Avatar',
       redirectTo: '/avatar'
+    },
+    {
+      icon: 'add-circle-outline',
+      name: 'Fab',
+      redirectTo: '/fab'
     }
   ];
 
