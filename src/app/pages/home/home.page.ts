@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import { Observable } from 'rxjs';
 import { Componente } from 'src/app/interfaces/component.interface';
+import { UserService } from '../../services/user.service';
 
 
 @Component({
@@ -7,48 +10,17 @@ import { Componente } from 'src/app/interfaces/component.interface';
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
-  components: Componente[] = [
-    {
-      icon: 'american-football',
-      name: 'Action Sheet',
-      redirectTo: '/action-sheet'
-    },
-    {
-      icon: 'alert-circle-outline',
-      name: 'Alert',
-      redirectTo: '/alert'
-    },
-    {
-      icon: 'beaker-outline',
-      name: 'Avatar',
-      redirectTo: '/avatar'
-    },
-    {
-      icon: 'add-circle-outline',
-      name: 'Fab',
-      redirectTo: '/fab'
-    },{
-      icon: 'infinite-outline',
-      name: 'Infinite Scroll',
-      redirectTo: '/infinite-scroll'
-    },
-    {
-      icon: 'hammer-outline',
-      name: 'Input',
-      redirectTo: '/input'
-    },
-    {
-      icon: 'list-outline',
-      name: 'List',
-      redirectTo: '/list'
-    },
-    {
-      icon: 'refresh-circle-outline',
-      name: 'Loading',
-      redirectTo: '/loading'
-    }
-  ];
+  components: Observable<Componente[]>;
+
+  constructor(private menuCtrl: MenuController,
+              private userService: UserService){}
+
+  ngOnInit(): void {
+    this.components = this.userService.getMenuOpts();
+  }
+
+
 
 }

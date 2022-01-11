@@ -1,13 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Components</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title color="primary">Components</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
     <ion-item
-      *ngFor="let item of components"
+      *ngFor="let item of components | async"
       [routerLink] = "item.redirectTo"
       detail="true">
       <ion-icon
