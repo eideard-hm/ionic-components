@@ -20,13 +20,15 @@ export class InfiniteScrollPage implements OnInit {
     }, 5000);
   }
 
-  loadData(e){
-    // console.log(e);
-    this.infiniteScroll.complete();
-    this.infiniteScroll.disabled = true;
-    this.showBotton = true;
+  loadData(e) {
+    if (!this.showBotton) {
+      // console.log(e);
+      this.infiniteScroll.complete();
+      this.infiniteScroll.disabled = true;
+      this.showBotton = true;
 
-    console.log('Se ejecuto');
+      console.log('Se ejecuto');
+    }
   }
 
 }
