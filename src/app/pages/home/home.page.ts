@@ -43,6 +43,11 @@ export class HomePage {
       icon: 'list-outline',
       name: 'List',
       redirectTo: '/list'
+    },
+    {
+      icon: 'refresh-circle-outline',
+      name: 'Loading',
+      redirectTo: '/loading'
     }
   ];
 
