@@ -33,6 +33,16 @@ export class HomePage {
       icon: 'infinite-outline',
       name: 'Infinite Scroll',
       redirectTo: '/infinite-scroll'
+    },
+    {
+      icon: 'hammer-outline',
+      name: 'Input',
+      redirectTo: '/input'
+    },
+    {
+      icon: 'list-outline',
+      name: 'List',
+      redirectTo: '/list'
     }
   ];
 
