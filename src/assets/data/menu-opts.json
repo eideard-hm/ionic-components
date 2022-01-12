@@ -18,7 +18,8 @@
     "icon": "add-circle-outline",
     "name": "Fab",
     "redirectTo": "/fab"
-  },{
+  },
+  {
     "icon": "infinite-outline",
     "name": "Infinite Scroll",
     "redirectTo": "/infinite-scroll"
@@ -47,5 +48,10 @@
     "icon": "tablet-portrait-outline",
     "name": "Popover",
     "redirectTo": "/popover"
+  },
+  {
+    "icon": "code-working-outline",
+    "name": "Progress Bar",
+    "redirectTo": "/progress"
   }
 ]
