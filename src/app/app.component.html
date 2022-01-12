@@ -9,8 +9,10 @@
     <ion-content>
 
       <ion-list>
-        <ion-item
-                *ngFor="let item of options | async"
+
+        <ion-menu-toggle *ngFor="let item of options | async">
+
+          <ion-item
                 [routerLink] = "item.redirectTo"
                 detail="true">
           <ion-icon
@@ -19,6 +21,9 @@
           </ion-icon>
           <ion-label>{{item.name}}</ion-label>
         </ion-item>
+
+        </ion-menu-toggle>
+
       </ion-list>
 
     </ion-content>
